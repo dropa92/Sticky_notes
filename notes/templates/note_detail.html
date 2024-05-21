@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+ 
+{% block title %}Sticky Notes -{{ note.title }}{% endblock %}
+ 
+{% block content %}
+    <div class="note">
+        <h2>{{ note.title }}</h2>
+        <p>{{ note.content }}</p>
+        <button onclick="window.location.href='{%url 'note_update' pk=note.pk%}'">Modify</button>
+    </div>
+    <br>
+    <a href="{% url 'note_list' %}">Back to Note List</a>
+ {% endblock %}

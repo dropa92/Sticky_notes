@@ -1,0 +1,48 @@
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(199, 199, 199);
+    
+    
+}
+
+header{
+    background-color: #6b6868;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main{
+    margin: 20px;
+    
+    }
+
+.notes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.note{
+    margin-bottom: 20px;
+    background-color: #dfdb5fee;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    padding: 1%;
+    word-wrap: break-word;
+}
+    
+footer{
+    background-color: rgb(199, 199, 199);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.b_delete{
+    background-color: #de3030;
+    border-color: rgb(145, 157, 169);
+}

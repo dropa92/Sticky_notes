@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Sticky Notes - {{ page_title }}{% endblock %}
+
+{% block content %}
+    <h2 class="list_title">{{ page_title }}</h2>
+    <button onclick="window.location.href='{%url 'note_create'%}'">Add Note</button>
+    <div class="notes">
+        {% for note in notes %}
+       
+        <div class="note">
+            <a href="{% url 'note_detail' pk=note.pk %}">{{note.title }}</a>
+            <p>{{ note.content }}</p>
+            <button class="b_delete" onclick="window.location.href='{%url 'note_delete' pk=note.pk%}'">Delete</button>
+            <br>
+            <br>
+        </div>
+    
+        {% endfor %}
+    </div>
+{% endblock %}
