@@ -5,6 +5,7 @@
 {% block content %}
     <h2 class="list_title">{{ page_title }}</h2>
     <button onclick="window.location.href='{%url 'note_create'%}'">Add Note</button>
+    <button onclick="window.location.href='{%url 'create_post'%}'">Add Post</button>
     <div class="notes">
         {% for note in notes %}
        
@@ -18,4 +19,18 @@
     
         {% endfor %}
     </div>
+
+    
+    <div class="posts">
+        {% for post in posts %}
+        <div class="post">
+            <a href="{% url 'post_detail' pk=post.pk %}">{{post.title }}</a>
+            <button class="b_delete" onclick="window.location.href='{%url 'post_delete' pk=post.pk%}'">Delete</button>
+            <br>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+    
+        
 {% endblock %}

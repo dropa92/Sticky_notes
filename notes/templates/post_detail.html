@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+ 
+{% block title %}Sticky Notes -{{ post.title }}{% endblock %}
+ 
+{% block content %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <h3>By: {{ post.author.name }}</h3>
+        <p>{{ post.content }}</p>
+        <button onclick="window.location.href='{%url 'post_update' pk=post.pk%}'">Modify</button>
+    </div>
+    <br>
+    <a href="{% url 'list' %}">Back to List</a>
+ {% endblock %}

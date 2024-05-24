@@ -1,6 +1,7 @@
 body{
     font-family: 'Arial', sans-serif;
     background-color: rgb(199, 199, 199);
+
     
     
 }
@@ -17,14 +18,14 @@ main{
     
     }
 
-.notes{
+.notes, .posts {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
 }
 
-.note{
+.note {
     margin-bottom: 20px;
     background-color: #dfdb5fee;
     border: 1px solid #000000;
@@ -33,6 +34,21 @@ main{
     width: 300px;
     padding: 1%;
     word-wrap: break-word;
+}
+
+.post{
+    margin-bottom: 20px;
+    background-color: #4eaae3ee;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    padding: 1%;
+    word-wrap: break-word;
+}
+
+.post a{
+    color: white;
 }
     
 footer{
@@ -46,3 +62,4 @@ footer{
     background-color: #de3030;
     border-color: rgb(145, 157, 169);
 }
+
