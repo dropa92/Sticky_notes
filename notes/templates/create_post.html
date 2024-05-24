@@ -4,13 +4,13 @@
     
 {% block content %}
     <h2>{% if form.instance.pk %}Edit {% else %}Create {% endif %}Note</h2>
-    <div class="note">
-    <form method="POST" action="{% if form.instance.pk %}{% url 'note_update' pk=form.instance.pk %}{% else %}{% url 'note_create' %}{%endif %}">
+    <div class="post">
+    <form method="POST" action="{% if form.instance.pk %}{% url 'post_update' pk=form.instance.pk %}{% else %}{% url 'create_post' %}{%endif %}">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Save</button>
     </form>
     </div>
     <br>
-    <a href="{% url 'list' %}">Back to Note List</a>
+    <a href="{% url 'list' %}">Back to List</a>
 {% endblock %}
